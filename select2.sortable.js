@@ -3,6 +3,7 @@
  * - enable select2 to be sortable via normal select element
  *
  * author      : Vafour
+ * modified by : Artūrs Cirsis
  * inspired by : jQuery Chosen Sortable (https://github.com/mrhenry/jquery-chosen-sortable)
  * License     : GPL
  */
@@ -34,7 +35,7 @@
                         return undefined;
                     }
                     var id = $(this).data('data').id;
-                    return $select.find('option[value="' + id + '"]')[0];
+                    return $select.find('option[value="' + id.replace(/"/g, '&quot;') + '"]')[0];
                 }));
 
 
