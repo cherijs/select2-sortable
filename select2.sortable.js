@@ -3,7 +3,6 @@
  * - enable select2 to be sortable via normal select element
  *
  * author      : Vafour
- * modified by : Artūrs Cirsis
  * inspired by : jQuery Chosen Sortable (https://github.com/mrhenry/jquery-chosen-sortable)
  * License     : GPL
  */
@@ -30,7 +29,7 @@
                 });
 
                 sorted = $($select2.find('li.select2-selection__choice').map(function () {
-                    // sorted = $($select2.find('.select2-selection__choice li[class!="select2-search-field"]').map(function () {
+                    // sorted = $($select2.find('.select2-selection__choice li[class!="select2-search"]').map(function () {
                     if (!this) {
                         return undefined;
                     }
@@ -64,7 +63,7 @@
                         animation: 50,
                         ghostClass: "sortable-ghost",
                         // placeholder: 'ui-state-highlight',
-                        // items: 'li:not(.select2-search-field)',
+                        draggable: '.select2-selection__choice',
                         // tolerance: 'pointer'
                     }
                 };
